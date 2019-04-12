@@ -4,6 +4,12 @@
 @import "nav.css";
 
 * {
+  /*
+    box-sizing: border-box 는 패딩을 전체 주어진 width에 포함시키겠다는 소리
+    이걸 없애면 네비게이션 바가 100% + 90(45*2) 가 되어 오른쪽으로 조금 넘어가버려서
+    마지막 more 버튼이 보이지 않게된다.
+    */
+
   box-sizing: border-box;
 }
 
