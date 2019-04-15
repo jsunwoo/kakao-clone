@@ -1,0 +1,36 @@
+.find .find__header-list {
+  /* background-color: red; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.find .find__header-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find .header-btn__icon,
+.find .header-btn__name {
+  margin-top: 10px;
+  font-size: 12px;
+  /* display: block; */
+}
+
+.find .header-btn__icon {
+  margin-bottom: 5px;
+}
+
+.find .find__recommended {
+  margin-top: 20px;
+  padding-top: 20px;
+  /* border-top: 1px solid black; */
+  border-top: 1px solid #f7f7f7;
+}
+
+.find .find__title {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
