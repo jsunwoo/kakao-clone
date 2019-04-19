@@ -47,7 +47,7 @@
 
 .friend .friend__now-listening {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 15px;
   border: 2px solid #52e084;
 }
@@ -57,7 +57,8 @@
 }
 
 .friend__now-listening i {
-  font-size: 12px;
+  padding-left: 1px;
+  font-size: 10px;
 }
 
 .friend .friend__add-btn {
