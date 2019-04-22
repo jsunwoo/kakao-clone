@@ -18,6 +18,11 @@
   /* display: block; */
 }
 
+.find .header-btn__name-below {
+  margin-top: 0px;
+  font-size: 12px;
+}
+
 .find .header-btn__icon {
   margin-bottom: 5px;
 }
