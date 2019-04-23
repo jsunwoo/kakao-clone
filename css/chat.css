@@ -119,6 +119,8 @@
 
 .chat__imcoming-message .message__bubble {
   border-bottom-left-radius: 0px;
+  background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+  color: white;
 }
 
 .chat__outgoing-message .message__bubble {
