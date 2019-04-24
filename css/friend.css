@@ -30,6 +30,11 @@
   margin-bottom: 5px;
 }
 
+.friend__content .friend__email {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
 .friend__content .friend__status,
 .friend__content .friend__bottom-text,
 .friend .friend__timestamp {
