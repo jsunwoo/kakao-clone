@@ -1,3 +1,12 @@
+.header-wrapper {
+  position: fixed;
+  background-color: white;
+  top: 0px;
+  width: 100%;
+  padding-top: 30px;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+}
+
 .chat-body {
   padding: 40px 0px;
 }
@@ -6,9 +15,10 @@
   padding: 0px 20px;
 }
 
-.chat {
+.chat-body {
   background-image: url("../images/spring.png");
-  min-height: 100vh;
+  min-height: 200vh;
+  padding-top: 100px;
 }
 
 .chat__write {
