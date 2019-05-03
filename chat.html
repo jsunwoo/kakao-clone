@@ -65,14 +65,13 @@
         </li>
       </ul>
     </main>
-    <div class="chat__write">
-      <div class="chat__write-column">
+    <div class="chat__write-container">
+      <!-- input을 앞으로 옮긴 이유는 input 아래에만 이벤트를 넣어 icon을 숨길수 있기 때문 -->
+      <input class="chat__write" type="text" placeholder="Type here" />
+      <div class="chat__icon-left chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__write-column">
-        <input class="chat__write-input" type="text" placeholder="Type here" />
-      </div>
-      <div class="chat__write-column">
+      <div class="chat__icon-right chat__icon">
         <span class="chat__write-icon">
           <i class="far fa-smile"></i>
         </span>

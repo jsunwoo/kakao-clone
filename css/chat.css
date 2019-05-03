@@ -21,22 +21,55 @@
   padding-top: 100px;
 }
 
-.chat__write {
-  position: fixed;
-  bottom: 50px;
-  width: 80%;
+.chat__write-container {
+  /* width: 80%; */
+  /* border-radius: 40px; */
+  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+  bottom: 0px;
   display: flex;
   background-color: #fcfcfc;
   padding: 5px 20px;
-  border-radius: 40px;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   align-items: center;
   justify-content: space-between;
   /* position: fixed 가운데 정렬하는 법 */
+  position: fixed;
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+.chat__write {
+  bottom: 0px;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.chat__icon-left {
+  position: absolute;
+}
+
+.chat__icon-right {
+  position: absolute;
+  right: 15px;
+}
+
+.chat__write:focus {
+  outline: none;
+}
+
+/* ~ 는 chat__write 이후 모든 자식에게 영향을 미침 */
+.chat__write:focus ~ .chat__icon {
+  opacity: 0.3;
+}
+
+.chat__icon {
+  font-size: 16px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .chat__write i {
@@ -47,16 +80,8 @@
   width: 80%;
 }
 
-.chat__write-column input {
-  padding: 10px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-}
-
-.chat__write-column input:focus {
-  outline: none;
-}
+/* .chat__write-column input {
+} */
 
 .chat .chat__messages {
   display: flex;
