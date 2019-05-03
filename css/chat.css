@@ -47,6 +47,21 @@
   right: 15px;
 }
 
+@keyframes float {
+  0% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  50% {
+    box-shadow: 0 13px 27px -60px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  100% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+}
+
 .chat__write {
   bottom: 0px;
   margin: 0 auto;
@@ -67,8 +82,10 @@
   padding: 15px 30px;
   border-radius: 30px;
   transform: translateY(-20px);
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: float 2.5s linear infinite forwards;
 }
 
 /* ~ 는 chat__write 이후 모든 자식에게 영향을 미침 */
@@ -169,4 +186,38 @@
 
 .chat__outgoing-message .message__bubble {
   border-bottom-right-radius: 0px;
+}
+
+.chat__imcoming-message {
+  /* ease-in 은 처음에 느리고, ease-out 은 나중에 느림, linear 은 1차함수 */
+  animation: incomingAnim 1s linear forwards;
+}
+
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.chat__outgoing-message {
+  /* ease-in 은 처음에 느리고, ease-out 은 나중에 느림, linear 은 1차함수 */
+  animation: outgoingAnim 1s linear forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes outgoingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
