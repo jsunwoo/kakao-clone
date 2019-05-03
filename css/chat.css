@@ -22,14 +22,12 @@
 }
 
 .chat__write-container {
-  /* width: 80%; */
   /* border-radius: 40px; */
-  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
+  /* background-color: #fcfcfc; */
+  /* padding: 5px 20px; */
+  width: 100%;
   bottom: 0px;
   display: flex;
-  background-color: #fcfcfc;
-  padding: 5px 20px;
   align-items: center;
   justify-content: space-between;
   /* position: fixed 가운데 정렬하는 법 */
@@ -39,18 +37,9 @@
   right: 0;
 }
 
-.chat__write {
-  bottom: 0px;
-  width: 100%;
-  border-radius: 0;
-  padding: 20px 60px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-}
-
 .chat__icon-left {
   position: absolute;
+  left: 15px;
 }
 
 .chat__icon-right {
@@ -58,13 +47,33 @@
   right: 15px;
 }
 
+.chat__write {
+  bottom: 0px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  border: none;
+  font-size: 14px;
+  /* transition: width 0.5s ease-in; */
+  /* transition: width 0.5s ease-in, border-radius 0.5s ease-in; */
+  transition: all 0.5s ease-in;
+}
+
 .chat__write:focus {
   outline: none;
+  height: 50%;
+  width: 80%;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transform: translateY(-20px);
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
 
 /* ~ 는 chat__write 이후 모든 자식에게 영향을 미침 */
 .chat__write:focus ~ .chat__icon {
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .chat__icon {
