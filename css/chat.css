@@ -5,6 +5,8 @@
   width: 100%;
   padding-top: 30px;
   box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  /* 채팅창이 헤더를 덮는 현상 해결 */
+  z-index: 1;
 }
 
 .chat-body {
@@ -127,6 +129,7 @@
     rgba(0, 0, 0, 0.07) 0px 5px 15px 0px;
   text-transform: uppercase;
   font-weight: 700;
+  animation: spin 1s linear infinite;
 }
 
 .message {
@@ -142,6 +145,15 @@
 
 .chat__imcoming-message {
   align-self: flex-start;
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
 }
 
 .chat__imcoming-message img {
